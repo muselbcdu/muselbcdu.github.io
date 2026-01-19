@@ -230,7 +230,7 @@
 </section>
 
     <section class="grid">
-      <a class="card" href="article.html" onclick="openModal(event)">
+      <a class="card" href="article.html" onclick="openModal(event, 'article')">
         <img src="thumb.png" alt="Article thumbnail">
         <h3>Patriarchy Hidden as Witty Remark?</h3>
       </a>
@@ -266,31 +266,28 @@
   let modalSource = "index";
 
 <script>
- function openModal(event, source = "index") {
+ let modalSource = "index";
+
+function openModal(event, source = "index") {
   if (event) event.preventDefault();
   modalSource = source;
   document.getElementById("registerModal").style.display = "flex";
 }
 
-
-  function closeModal() {
+function closeModal() {
   document.getElementById("registerModal").style.display = "none";
-
   if (modalSource === "article") {
     window.location.href = "article.html";
   }
 }
 
 function continueWithoutRegistering() {
-  if (modalSource === "article") {
-    window.location.href = "article.html";
-  } else {
-    document.getElementById("registerModal").style.display = "none";
-  }
+  document.getElementById("registerModal").style.display = "none";
+  window.location.href = "article.html";
 }
 </script>
-
 </body>
 </html>
+
 
 
