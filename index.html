@@ -173,11 +173,14 @@
       color:#111;
     }
     footer {
-  width: 100%;
-  text-align: center;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 24px 0;
   opacity: 0.6;
 }
+
     a {
       color:#111;
       text-decoration:none;
@@ -185,7 +188,6 @@
   </style>
 </head>
 <body>
-
 <header class="hero">
   <a href="index.html">
     <img src="banner.png" alt="MUSE banner">
@@ -272,11 +274,17 @@ function closeModal() {
 
 function continueWithoutRegistering() {
   document.getElementById("registerModal").style.display = "none";
-  window.location.href = "article.html";
+
+  if (modalSource === "article") {
+    window.location.href = "article.html";
+  }
+  // if source is index, do nothing (stay on cover page)
 }
+
 </script>
 </body>
 </html>
+
 
 
 
