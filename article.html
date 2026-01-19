@@ -5,6 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MUSE — Article</title>
   <style>
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #ffffff;
+  width: 90%;
+  max-width: 420px;
+  padding: 24px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content video {
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.modal-btn {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  border: 1px solid #111;
+  background: #fff;
+  cursor: pointer;
+}
+
+.modal-btn.continue {
+  background: none;
+  border: none;
+  font-size: 14px;
+  margin-top: 8px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
 .subscribe-bar {
   display: flex;
   justify-content: flex-end;
@@ -76,13 +139,44 @@ footer {
     <img src="banner.png" alt="MUSE banner">
   </a>
 </header>
- 
-
-
 <div class="subscribe-bar">
   <button class="subscribe-btn" onclick="openModal(event)">
     Subscribe Now
   </button>
+</div>
+
+ <div id="registerModal" class="modal">
+  <div class="modal-content">
+
+    <video src="register.mp4" autoplay muted loop playsinline></video>
+
+    <p class="modal-title">Register Now:</p>
+
+      <input type="hidden" name="form-name" value="muse-signups">
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+        class="modal-input"
+      >
+
+      <p class="modal-title">Register Now:</p>
+
+<button
+  class="modal-btn google"
+  onclick="window.open('https://forms.gle/YrWxMZPtsPKaBX9L9', '_blank')">
+  Sign up with Email
+</button>
+
+<button
+  class="modal-btn continue"
+  onclick="continueWithoutRegistering()">
+  Continue Without Registering
+</button>
+
+  </div>
 </div>
 <script>
   function openModal(event) {
