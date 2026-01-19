@@ -23,14 +23,6 @@
   cursor: pointer;
 }
 
-.modal-input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
-  font-size: 16px;
-  border: 1px solid #111;
-}
-
 .modal-btn.continue {
   background: none;
   border: none;
@@ -255,20 +247,23 @@
 
     <p class="modal-title">Register Now:</p>
 
-<button
-  class="modal-btn google"
-  onclick="window.open('https://forms.gle/Cyp9rEMZRsz4CqVV7', '_blank')">
-  Sign up with Email
-</button>
+    <button
+      class="modal-btn google"
+      onclick="window.open('https://forms.gle/bAHvNkY9Coe1ShBH7', '_blank')">
+      Subscribe with Email
+    </button>
 
-<button
-  class="modal-btn continue"
-  onclick="continueWithoutRegistering()">
-  Continue Without Registering
-</button>
+    <button
+      class="modal-btn continue"
+      onclick="continueWithoutRegistering()">
+      Continue Without Registering
+    </button>
+
+    <button class="modal-close" onclick="closeModal()">×</button>
 
   </div>
 </div>
+
 <script>
   function openModal(event) {
     event.preventDefault();
@@ -287,4 +282,5 @@
 
 </body>
 </html>
+
 
