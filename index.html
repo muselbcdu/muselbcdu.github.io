@@ -207,10 +207,10 @@
 <header class="hero">
   <a href="index.html">
     <img src="banner.png" alt="MUSE banner">
-  </a>
+  </a> 
 </header>
 <div class="subscribe-bar">
-  <button class="subscribe-btn" onclick="openModal(event)">
+  <button  class="subscribe-btn" onclick="openModal(event)">
     Subscribe Now
   </button>
 </div>
@@ -255,9 +255,8 @@
 
     <p class="modal-title">Register Now:</p>
 
-    <!-- EMAIL FORM -->
-    <form name="muse-signups" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="muse-signups">
+   
+         <input type="hidden" name="form-name" value="muse-signups">
 
       <input
         type="email"
@@ -267,20 +266,20 @@
         class="modal-input"
       >
 
-      <button type="submit" class="modal-btn email">
-        Sign up with Email
-      </button>
-    </form>
+      <p class="modal-title">Register Now:</p>
 
-    <button class="modal-btn google">
-      Sign up with Google
-    </button>
+<button
+  class="modal-btn google"
+  onclick="window.open('https://forms.gle/Cyp9rEMZRsz4CqVV7', '_blank')">
+  Sign up with Email
+</button>
 
-    <button class="modal-btn continue" onclick="continueWithoutRegistering()">
-      Continue Without Registering
-    </button>
+<button
+  class="modal-btn continue"
+  onclick="continueWithoutRegistering()">
+  Continue Without Registering
+</button>
 
-    <button class="modal-close" onclick="closeModal()">×</button>
   </div>
 </div>
 <script>
