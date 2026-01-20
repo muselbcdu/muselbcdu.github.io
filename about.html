@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>About — Muse</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Playfair Display", Georgia, serif;
+      background: #2b2b2b;
+      color: #ffffff;
+    }
+
+    /* BANNER */
+    .hero {
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      display: block;
+    }
+
+    /* LAYOUT */
+    .about-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 24px;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    /* IMAGE */
+    .about-image img {
+      width: 100%;
+      max-width: 420px;
+      display: block;
+    }
+
+    /* TEXT */
+    .about-text p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .about-text a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    footer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 24px 0;
+      opacity: 0.6;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .about-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- BANNER -->
+  <header class="hero">
+    <img src="banner.png" alt="Muse banner">
+  </header>
+
+  <!-- CONTENT -->
+  <section class="about-wrapper">
+
+    <div class="about-image">
+      <img src="founder picture.jpeg" alt="Founder of Muse">
+    </div>
+
+    <div class="about-text">
+      <p>
+        Hi,<br><br>
+        this is Nivedita, the Founder of Muse.
+        I am a student at the University of Delhi, studying computer science
+        and mathematics.
+      </p>
+
+      <p>
+        I am interested in pursuing a career in content curation and
+        front end development, so this is mine and my friends’ proof of
+        work in the fields we want to pursue.
+      </p>
+
+      <p>
+        Each section exhibits the respected member’s strength and
+        expertise.
+      </p>
+
+      <p>
+        If you find yourself interested to know more about me,
+        connect with me on LinkedIn:
+        <a href="#" target="_blank">(insert link)</a>
+      </p>
+
+      <p>
+        If you want to showcase your talent as well,
+        apply to Muse at:
+        <a href="mailto:insert@gmail.com">(insert gmail)</a>
+      </p>
+    </div>
+
+  </section>
+
+  <footer>
+    © MUSE
+  </footer>
+
+</body>
+</html>
 
